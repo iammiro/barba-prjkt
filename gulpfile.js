@@ -65,14 +65,16 @@ gulp.task('min-css', function () {
 
 // Компиляция + автопрефиксер + минификация файлов Stylus
 gulp.task('stylus', function () {
-    return gulp.src('src/assets/kharkivdesign.styl')
+    const f = Filter(['src/block/**/*.styl'], {restore: true});
+    return gulp.src('src/block/**/*.styl')
+        .pipe(f)
         .pipe(stylus())
         .pipe(postcss([autoprefixer()]))
         .pipe(cleanCSS({compatibility: 'ie8'}))
-        .pipe(gulp.dest('build/css/'))
+        .pipe(concat('main.css'))
+        .pipe(gulp.dest('build/css'))
         .pipe(browserSync.stream());
 });
-
 // Компиляция файлов PUG
 gulp.task('pug', function () {
     return gulp.src('src/*.pug')

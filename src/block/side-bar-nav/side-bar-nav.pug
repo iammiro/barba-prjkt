@@ -1,0 +1,13 @@
+mixin b-side-bar-nav()
+	+b('div').sidebar
+		+e('nav').navigation
+			+b('ul').ul
+				+e('li').navigation-item
+					+e('img')(src="img/sidebarImg1.png").img
+					+e('a')(href="index.html").link Success stories
+				+e('li').navigation-item
+					+e('img')(src="img/sidebarImg2.png").img
+					+e('a')(href="howto.html").link How to trade
+				+e('li').navigation-item
+					+e('img')(src="img/sidebarImg3.png").img
+					+e('a')(href="signals.html").link Free binary signals
