@@ -4,19 +4,7 @@ mixin b-stories()
 			+e('span').span Our trader's success stories
 			+e('span').span Read every story
 		+e.navigation
-			+b('ul').stories-navigation
-				+e('li').item
-					+e('img')(src="img/storiesNavImg1.png").img
-					+e('a')(href="/").link Mia
-				+e('li').item
-					+e('img')(src="img/storiesNavImg2.png").img
-					+e('a')(href="/").link Genre
-				+e('li').item
-					+e('img')(src="img/storiesNavImg3.png").img
-					+e('a')(href="/").link Ben Rodgers
-				+e('li').item
-					+e('img')(src="img/storiesNavImg4.png").img
-					+e('a')(href="/").link You story
+			+b-stories-nav()
 		+e.header
 			+e('h2').h2 How do I earn 30,000 euros per month in just a few work hours per week?
 		+e.text

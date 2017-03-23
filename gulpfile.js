@@ -15,7 +15,7 @@ const Filter = require('gulp-filter');
 const babel = require('gulp-babel');
 
 // Static server
-gulp.task('serve', ['stylus', 'pug', 'min-js', 'min-css', 'min-scripts'], function () {
+gulp.task('serve', ['stylus', 'pug', 'min-js', 'min-css', 'min-scripts', 'compress-images'], function () {
     browserSync.init({
         server: {
             baseDir: "./build/"
@@ -30,7 +30,7 @@ gulp.task('serve', ['stylus', 'pug', 'min-js', 'min-css', 'min-scripts'], functi
 
 //Сжатие и перемещение изображений
 gulp.task('compress-images', function () {
-    gulp.src('src/assets/i**/*')
+    gulp.src('src/assets/img/*')
         .pipe(imagemin())
         .pipe(gulp.dest('build/img'))
 });
@@ -49,15 +49,15 @@ gulp.task('min-js', function () {
 
 //Конкатенация js библиотек
 gulp.task('min-scripts', function () {
-    return gulp.src('src/assets/vendor/**/*.js')
-        .pipe(concat('all.js'))
+    return gulp.src('src/assets/vendor/*.js')
+        .pipe(concat('bundle.js'))
         // .pipe(minify())
         .pipe(gulp.dest('build/js/'));
 });
 
 //Конкатенация CSS сторонних вендоров
 gulp.task('min-css', function () {
-    return gulp.src('src/assets/vendor/**/*.css')
+    return gulp.src('src/assets/vendor/*.css')
         .pipe(concatCss("bundle.css"))
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest('build/css/'));

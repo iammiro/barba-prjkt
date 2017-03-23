@@ -3,11 +3,14 @@ mixin b-side-bar-nav()
 		+e('nav').navigation
 			+b('ul').ul
 				+e('li')#nav-li-1.navigation-item.is-active
-					+e('img')(src="img/sidebarImg1.png").img
-					+e('a')(href="index.html").link Success stories
+					+e('a')(href="index.html").link
+						+e('img')(src="img/sidebarImg1.png").img
+						+e('span').span Success stories
 				+e('li')#nav-li-2.navigation-item
-					+e('img')(src="img/sidebarImg2.png").img
-					+e('a')(href="howto.html").link How to trade
+					+e('a')(href="howto.html").link
+						+e('img')(src="img/sidebarImg2.png").img
+						+e('span').span How to trade
 				+e('li')#nav-li-3.navigation-item
-					+e('img')(src="img/sidebarImg3.png").img
-					+e('a')(href="signals.html").link Free binary signals
+					+e('a')(href="signals.html").link
+						+e('img')(src="img/sidebarImg3.png").img
+						+e('span').span Free binary signals
