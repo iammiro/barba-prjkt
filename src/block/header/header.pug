@@ -1,7 +1,8 @@
 mixin b-header()
 	+b('header').header
 			+e.logo
-				img(src="img/logo.png" alt="logo")
+				+e('a')(href="/")
+					img(src="img/logo.png" alt="logo")
 			+e.text
 				+e('p').p We will teach you how to earn money
 			+e.button
