@@ -1,9 +1,11 @@
 mixin b-header()
 	+b('header').header
+		+e('div').logo-text-wrap
 			+e.logo
 				+e('a')(href="/")
 					img(src="img/logo.png" alt="logo")
 			+e.text
 				+e('p').p We will teach you how to earn money
+		+e('div').button-wrap
 			+e.button
 				+e('a')(href="/").btn-link Log in

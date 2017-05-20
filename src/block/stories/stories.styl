@@ -1,24 +1,22 @@
 .stories
-  width 90%
   background-color #ffffff
   margin 30px
   padding 0 26px
   &__head
     height 79px
-    display flex
-    flex-direction row
-    justify-content space-between
-    align-items center
+    flex-box(flex, row, space-between, center)
   &__span
     color #878787
     font-family 'Montserrat', sans-serif
     font-size 18px
     font-weight 400
+  &__navigation
+    flex-box(flex, row, space-between, center)
 .stories
   margin 27px
   padding-bottom 15px
   &__h2
-    margin 27px
+    margin 27px 27px 27px 0
     color #85c8fe
     font-family 'Montserrat', sans-serif
     font-size 30px
@@ -35,7 +33,4 @@
     float left
     margin 10px 20px 10px 0
   &__img-big
-    display flex
-    flex-direction row
-    justify-content center
-    align-items center
+    flex-box(flex, row, center, center)

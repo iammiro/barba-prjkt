@@ -65,9 +65,9 @@ gulp.task('min-css', function () {
 
 // Компиляция + автопрефиксер + минификация файлов Stylus
 gulp.task('stylus', function () {
-    const f = Filter(['src/block/**/*.styl'], {restore: true});
-    return gulp.src('src/block/**/*.styl')
-        .pipe(f)
+    // const f = Filter(['src/block/**/*.styl'], {restore: true});
+    return gulp.src('src/block/index.styl')
+        // .pipe(f)
         .pipe(stylus())
         .pipe(postcss([autoprefixer()]))
         .pipe(cleanCSS({compatibility: 'ie8'}))

@@ -2,18 +2,16 @@
   height 81px
   width 100%
   background-color #85c8fe
-  display flex
-  flex-direction row
-  justify-content space-between
-  align-items center
+  flex-box(flex, row, space-between, center)
+  &__logo-text-wrap
+    height 81px
+    flex-box(flex, row, flex-start, center)
   &__logo
     background-color #fefefe
     height 81px
+    margin-right 30px
     width 330px
-    display flex
-    flex-direction column
-    justify-content center
-    align-items center
+    flex-box(flex, column, center, center)
   &__text
     height 24px
     padding-right 250px
@@ -27,10 +25,7 @@
     border-radius 5px
     background-color #ff6b01
     margin-right 69px
-    display flex
-    flex-direction column
-    justify-content center
-    align-items center
+    flex-box(flex, column, center, center)
   &__btn-link
     color #ffffff
     font-family 'Montserrat', sans-serif;
